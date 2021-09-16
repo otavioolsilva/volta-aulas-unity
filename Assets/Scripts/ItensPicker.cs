@@ -12,6 +12,7 @@ public class ItensPicker : MonoBehaviour { // Nome da Classe
     public Text scoreText; //Pontuação
      public Text liveText; // Vida
     private int live; // barra de vida
+    private int max_live = 10;
     public Image healthbar; // Imagem da barra de vida
 
     public AudioSource ItensSound; // Som de pegar a  Moeda
@@ -69,7 +70,7 @@ public class ItensPicker : MonoBehaviour { // Nome da Classe
     }
     private void UpdateHealthBar()
     {
-        healthbar.fillAmount = live/10;
+        healthbar.fillAmount = (float)live / (float)max_live;
     }
     
 
